@@ -17,7 +17,7 @@ export class EntryRepository {
     try {
       const entries = await prisma.entry.findMany({
         where: {
-          content: {
+          body: {
             contains: query,
             mode: "insensitive", // optional: case-insensitive search
           },
